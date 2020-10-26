@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Login | Registar-se</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/form-login.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="images/logoRoxa.png" alt="Login SUSE">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Registro</h4>
+							<div class="media-social">
+								<a href="#" class="btn-face m-b-10">
+									<img src="images/icons/facebook-square-brands.svg" alt="face">
+									Facebook
+								</a>
+			
+								<a href="#" class="btn-google m-b-10">
+									<img src="images/icons/icon-google.png" alt="GOOGLE">
+									Google
+								</a>
+							</div>
+							<div class="or-seperator"><i>ou</i></div>
+							<form method="POST" class="my-login-validation" novalidate="">
+								<div class="form-group">
+									<label for="name">Nome</label>
+									<input id="name" type="text" class="form-control" name="name" required autofocus>
+									<div class="invalid-feedback">
+										Qual o seu nome?
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="email">E-Mail</label>
+									<input id="email" type="email" class="form-control" name="email" required>
+									<div class="invalid-feedback">
+										Email Obrigatório
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="password">Senha</label>
+									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<div class="invalid-feedback">
+										Senha Obrigatória
+									</div>
+									<img src="images/icons/eye.svg" id="eye" class="eye">
+								</div>
+
+								<div class="form-group">
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
+										<label for="agree" class="custom-control-label">Eu concordo com o <a href="#">Termos e Condições</a></label>
+										<div class="invalid-feedback">
+											Você deve concordar com nossos Termos e Condições
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block">
+										Registro
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Já tem uma conta? <a href="index.html">Entrar</a>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/my-login.js"></script>
+</body>
+</html>

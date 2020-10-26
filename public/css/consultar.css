@@ -6,28 +6,23 @@
 }
 
 aside {
-    width: clamp(24rem, 25vw, 44rem);
+    
+    width: clamp(14rem, 25vw, 14rem);
     background: #862adb;
-    padding: clamp(3rem, 5vw, 8rem);
+    padding: clamp(1rem, 5vw, 2rem);
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-aside h2 {
-    margin-top: 6.4rem;
-
-    font: 800 clamp(2rem, 5vw, 3.6rem)/1.1 'Nunito', sans-serif;
-}
-
 aside p {
-    margin-top: 2.4rem;
+    margin-top: .4rem;
     font: 400 1.6rem/1.5 'Nunito', sans-serif;
 }
 
 aside footer p {
-    margin-top: .8rem;
+    margin-top: 0.10rem;
 }
 
 #mapid {
@@ -58,7 +53,7 @@ a.add-aglomeracao {
 }
 
 a.add-aglomeracao:hover {
-    background: #17D6Eb
+    background: #56108A
 }
 
 .leaflet-popup-content-wrapper {
