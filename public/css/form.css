@@ -4,7 +4,7 @@ form {
   background: white;
   border: 1px solid #d3e2e5;
 
-  border-radius: 2rem;
+  border-radius: .6rem;
 
   overflow: hidden;
 
@@ -46,7 +46,7 @@ fieldset legend {
 
 .input-block label span {
   font-size: 1.4rem;
-  color: #8FA7D3;
+  color: #C4A9D0;
   margin-left: 2.4rem;
 }
 
@@ -55,7 +55,7 @@ fieldset legend {
 
   background: #F5F8FA;
   border: 1px solid #D3E2E5;
-  border-radius: 2rem;
+  border-radius: .6rem;
 
   color: #915FC0;
 }
@@ -84,7 +84,7 @@ fieldset legend {
   height: 6.4rem;
   padding: 0 1.6rem;
   margin-top: 2.4rem;
-  border-radius: 2rem;
+  border-radius: .6rem;
 
   cursor: pointer;
 }
