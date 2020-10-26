@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultar aglomeração | RA</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="icon" href="./public/images/favicon.png" />
+
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/animations.css" />
+    <link rel="stylesheet" href="./public/css/consultar.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="consultar">
+      <aside class="animate-right">
+        <header>
+          <img src="./public/images/favicon.png" width="80px" height="80px" alt="logo" />
+
+          <h3>Escolha o melhor momento para sair de casa</h3>
+
+        
+        </header>
+
+        <footer style="color: antiquewhite;">
+          <strong>Nova Cruz</strong>
+          <p>RN</p>
+        </footer>
+      </aside>
+
+      <div id="mapid" class="animate-appear"></div>
+
+      <a href="add-aglomeracao.html" class="add-aglomeracao.html" title="Reporte uma aglomeração">
+        <img src="./public/images/plus.svg" alt="Reporte uma aglomeração" />
+      </a>
+      
+    </div>
+
+  </body>
+  <script src="./public/scripts/consultar.js"></script>
+</html>
