@@ -16,6 +16,8 @@
 
 .user {
   animation-delay: 100ms;
+  position: absolute;
+  display: flexbox;
 }
 
 .fas{
