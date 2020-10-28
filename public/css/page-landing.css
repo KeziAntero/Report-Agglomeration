@@ -15,9 +15,9 @@
 }
 
 .user {
-  animation-delay: 100ms;
-  position: absolute;
-  display: flexbox;
+  line-height: 4.2rem;
+  margin-top: -60px;
+  
 }
 
 .fas{

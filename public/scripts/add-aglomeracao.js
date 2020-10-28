@@ -6,7 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',)
 
 
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "./public/images/location.svg",
     iconSize: [58, 68],
     iconAnchor: [29,68],
 })
@@ -26,37 +26,6 @@ map.on('click', (event) => {
     .addTo(map)
 })
 
-
-function addPhotoField() {
-    const container = document.querySelector('#images');
-
-    const fieldsContainer = document.querySelectorAll('.new-upload')
-
-    const newFieldContainer = fieldsContainer[fieldsContainer.length - 1].cloneNode(true)
-
-    const input = newFieldContainer.children[0]
-
-    if(input.value == "") {
-        return
-    }
-
-    input.value = ""
-
-    container.appendChild(newFieldContainer)
-}
-
-function deleteField(event) {
-    const span = event.currentTarget
-
-    const fieldsContainer = document.querySelectorAll('.new-upload')
-
-    if(fieldsContainer.length <= 1) {
-        span.parentNode.children[0].value = ""
-        return 
-    }
-
-    span.parentNode.remove()
-}
 
 function toggleSelect(event) {
     document.querySelectorAll('.button-select button')
