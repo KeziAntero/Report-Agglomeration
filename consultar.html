@@ -4,32 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consultar aglomeração | RA</title>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASPK5jKFjszlxVCvSKWklAPYz60HoK1iY&libraries=places&callback=initMap">
+</script>
 
     <link rel="icon" href="./public/images/favicon.png" />
    
     <link rel="stylesheet" href="./public/css/main.css" />
     <link rel="stylesheet" href="./public/css/animations.css" />
     <link rel="stylesheet" href="./public/css/consultar.css" />
+    
 
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="public/scripts/consultar.js"></script>
+    
   </head>
   <body>
+    
     <div id="consultar">
       <aside class="animate-right">
         <header>
@@ -42,14 +39,29 @@
         </footer>
       </aside>
 
-      <div id="mapid" class="animate-appear"></div>
+      
+      <div id="map" class="animate-appear"></div>
 
       <a href="add-aglomeracao.html" class="add-aglomeracao" title="Reporte uma aglomeração">
         <img src="./public/images/plus.svg" alt="Reporte uma aglomeração" />
       </a>
       
     </div>
-
+    <div style="display: none">
+      <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Insira um local"
+      />
+    </div>
+    
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <span id="place-name" class="title"></span><br />
+      <strong>Place ID:</strong> <span id="place-id"></span><br />
+      <span id="place-address"></span>
+    </div>
   </body>
-  <script src="./public/scripts/consultar.js"></script>
+ 
 </html>
