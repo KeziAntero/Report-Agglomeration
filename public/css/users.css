@@ -14,12 +14,12 @@
       
   }
 
-  #btn-limpar{
+  #btn-editar{
       background-color:#32cd33;
       color: #fff;
   }
 
-  #btn-limpar:hover{
+  #btn-editar:hover{
     background-color:#228b22;
 }
 
