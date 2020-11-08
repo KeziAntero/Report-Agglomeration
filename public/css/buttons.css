@@ -7,7 +7,7 @@
 
     cursor: pointer;
 
-    background: #862adb;
+    background:#862adb;
 
     border-radius: 2rem;
     color: white;
@@ -20,7 +20,7 @@
 }
 
 .primary-button:hover {
-    background: #56108A;
+    background:#56108A;
 }
 
 .primary-button img {
@@ -42,9 +42,9 @@
 }
 
 .button-select button.active {
-    background: #EDFFF6;
-    border: 1px solid #A1E9C5;
-    color: #37C77F;
+    background:#862adb;
+    border: 1px solid #56108A;
+    color: #ffffff;
 }
 
 .button-select button:first-child {

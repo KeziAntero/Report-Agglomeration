@@ -35,3 +35,26 @@
       box-shadow: none; 
     border: 1px solid#862adb;
     }
+
+    .text-center{
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    h6{
+      color: #1b1b1b;
+    }
+
+    .col-sm-8{
+      width: 70rem;
+      margin: 6.4rem auto;
+      background: white;
+     
+    
+     position: center;
+    
+      overflow: hidden;
+    
+      padding: 8rem;
+    }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="./public/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+
+    <link rel="icon" href="./public/images/logo-icon.png" />
+
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/animations.css" />
+    <link rel="stylesheet" href="./public/css/page-consulta.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+    <div id="page-consulta">
+      <aside class="animate-right">
+        <header>
+          <img src="./public/images/logonav.png" alt="logo" width="70" height="70"/>
+
+          <h2>Escolha um o melhor momento para sair de casa</h2>
+
+          
+        </header>
+
+        <footer>
+          <p>
+            latitude: <span id="latitude"></span>&deg;<br />
+            longitude: <span id="longitude"></span>&deg;
+          </p>
+        </footer>
+      </aside>
+
+      <div id="mapid" class="animate-appear"></div>
+
+      <a href="add-aglomeracao.html" class="add-aglomeracao" title="Adicione uma aglomeração">
+        <img src="./public/images/plus.svg" alt="Adicione uma aglomeração" />
+      </a>
+      
+    </div>
+
+  </body>
+  <script src="./public/scripts/page-consulta.js"></script>
+</html>

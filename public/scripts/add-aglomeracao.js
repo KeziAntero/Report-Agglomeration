@@ -1,12 +1,12 @@
 //create map
-const map = L.map('mapid').setView([-6.47926,-35.4348], 15);
+const map = L.map('mapid').setView([-6.47926,-35.43486], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',)
 .addTo(map);
 
 
 const icon = L.icon({
-    iconUrl: "./public/images/location.svg",
+    iconUrl: "./public/images/mark.svg",
     iconSize: [58, 68],
     iconAnchor: [29,68],
 })
@@ -35,7 +35,6 @@ function toggleSelect(event) {
     const button = event.currentTarget
     button.classList.add('active')
 
-    const input = document.querySelector('[name="detachment"]')
-    
+    const input = document.querySelector('[name="open_on_weekends"]')
     input.value = button.dataset.value
 }
