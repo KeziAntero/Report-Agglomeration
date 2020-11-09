@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1055786294958-91c4047ecjd9edhv3hre9ki9492gbc0k.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
 	<title>Login</title>
 	
 	<link rel="icon" href="./public/images/favicon.png" />
@@ -15,6 +15,8 @@
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="public/css/form-login.css">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body class="my-login-page">
@@ -31,15 +33,12 @@
 							<h4 class="card-title">Entrar</h4>
 							
 							<div class="media-social">
-								<a href="#" class="btn-face m-b-10">
+								<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink" class="btn-face m-b-10">
 									<i class="fab fa-facebook-f"></i>
 									Facebook
 								</a>
 			
-								<a href="#" class="btn-google m-b-10" class="g-signin2" data-onsuccess="onSignIn">
-									<i class="fab fa-google-plus-g fa-2x"></i>
-									    Google
-								</a>
+								<div class="g-signin2" data-onsuccess="onSignIn"></div>
 							</div>
 							<div class="or-seperator"><i>ou</i></div>
 

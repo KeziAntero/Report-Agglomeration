@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="1055786294958-91c4047ecjd9edhv3hre9ki9492gbc0k.apps.googleusercontent.com">
 	<title>Login | Registar-se</title>
 
 	<link rel="icon" href="./public/images/favicon.png" />
@@ -11,6 +13,8 @@
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/form-login.css">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body class="my-login-page">
 	<section class="h-100">
@@ -24,15 +28,12 @@
 						<div class="card-body">
 							<h4 class="card-title">Registro</h4>
 							<div class="media-social">
-								<a href="#" class="btn-face m-b-10">
+								<a href="javascript:void(0);" onclick="fbLogin();" id="fbLink" class="btn-face m-b-10">
 									<i class="fab fa-facebook-f"></i>
 									Facebook
 								</a>
 			
-								<a href="#" class="btn-google m-b-10">
-									<i class="fab fa-google-plus-g fa-2x"></i>
-									    Google
-								</a>
+								<div class="g-signin2" data-onsuccess="onSignIn"></div>
 							</div>
 							<div class="or-seperator"><i>ou</i></div>
 							<form method="POST" class="my-login-validation" novalidate="">
@@ -90,8 +91,10 @@
 		</div>
 	</section>
 
+	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="js/my-login.js"></script>
+	<script src="public/scripts/login.js"></script>
 </body>
 </html>
