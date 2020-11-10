@@ -124,8 +124,7 @@
 	justify-content: center;
   align-items: center;
 }
-.btn-face,
-.btn-google {
+.btn-face{
   
   font-size: 16px;
   line-height: 1.2;
@@ -137,28 +136,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc((100% - 10px) / 2);
-  height: 40px;
-  border-radius: 2rem;
+  width: 150px;
+  height: 38px;
+  
   border: none;
   color: aliceblue;
   box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
   text-decoration: none;
-  
+  margin: 8px;
+  background-color: #3b5998;
 }
-
-
-.btn-face {
-   background-color: #3b5998;
-}
-
 
 .btn-face i {
   font-size: 20px;
   margin-right: 10px;
   padding-bottom: 1px;
+ 
 }
 .btn-face:hover{
   text-decoration: none;
@@ -167,24 +162,6 @@
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.btn-google {
-	color: #fff;
-  background-color: #D64E3A;
-  margin-left: 10px !important;
-}
-
-.btn-google img {
-  width: 19px;
-  margin-right: 10px;
-  padding-bottom: 1px;
-}
-
-.btn-google:hover {
-  text-decoration: none;
-  color:#fff;
-  background-color: #B40000;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
 
 @media screen and (max-width: 425px) {
 	.my-login-page .card-wrapper .social-login {

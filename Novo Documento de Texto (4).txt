@@ -1,6 +1,6 @@
 git init
 git add .
-git commit -m "incluindo autenticação com facebook"
+git commit -m "Alteração do mapa Api Leaflet"
 git remote add origin https://github.com/KeziAntero/Report-Agglomeration.git
 git push -u origin master
 git branch escolar

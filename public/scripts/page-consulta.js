@@ -1,9 +1,9 @@
 if ('geolocation' in navigator) {
-    console.log('geolocation available');
+    
     navigator.geolocation.getCurrentPosition(position => {
       lat = position.coords.latitude;
       lon = position.coords.longitude;
-      console.log(lat, lon);
+      
       document.getElementById('latitude').textContent = lat;
       document.getElementById('longitude').textContent = lon;
 
@@ -14,8 +14,10 @@ if ('geolocation' in navigator) {
       const tiles = L.tileLayer(tileUrl, { attribution });
       tiles.addTo(mapid);
       
+
+      
       const icon = L.icon({
-        iconUrl: "./public/images/map-marker.svg",
+        iconUrl: "./public/images/mark.svg",
         iconSize: [58, 68],
         iconAnchor: [29,68],
         popupAnchor: [170, 2]
@@ -26,12 +28,17 @@ if ('geolocation' in navigator) {
         className: "map-popup",
         minWidth: 240,
         minHeight: 240
-    }).setContent('Lar das meninas <a href="orphanage.html?id=1" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"> </a>')
+    }).setContent('Indices <a href="indices.html?id=1"> <img src="./public/images/arrow-white.svg"> </a>')
      
-    const marker = L.marker([lat, lon]).addTo(mapid).bindPopup(popup);
+    L
+    .marker([lat, lon], { icon })
+    .addTo(mapid)
+    .bindPopup(popup)
+    
     });
+    
   } else {
-    console.log('geolocation not available');
+    document.getElementById('geolocation not available');
   }
 
 

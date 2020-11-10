@@ -17,6 +17,7 @@
     justify-content: center;
 
     transition: background-color .2s;
+    
 }
 
 .primary-button:hover {
@@ -30,6 +31,7 @@
 .button-select {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
 }
 
 .button-select button {
@@ -38,6 +40,7 @@
     border: 1px solid #D3E2E5;
     color: #5C8599;
 
+    outline: 0;
     cursor: pointer;
 }
 

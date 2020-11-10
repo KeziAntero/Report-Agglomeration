@@ -67,7 +67,7 @@ a.add-aglomeracao:hover {
 }
 
 .leaflet-popup-content {
-    color: #0089A5;
+    color: #56108A;
     margin: .8rem 1.2rem;
 
     display: flex;
@@ -78,7 +78,7 @@ a.add-aglomeracao:hover {
 .leaflet-popup-content a {
     width: 4rem;
     height: 4rem;
-    background: #15C3D6;
+    background:#862adb;
     box-shadow: 17.2868px 27.65px 41.48px rgba(23, 142, 166, 0.16);
     border-radius: 12px;
 
@@ -90,7 +90,7 @@ a.add-aglomeracao:hover {
 }
 
 .leaflet-popup-content a:hover {
-    background: #17D6Eb;
+    background: #56108A;
 }
 
 .leaflet-popup-tip {

@@ -21,7 +21,7 @@ aside.sidebar footer button {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    outline: 0;
     transition: background 0.2s;
 }
 
