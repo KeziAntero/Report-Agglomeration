@@ -24,10 +24,11 @@ aside h2 {
 aside p {
     margin-top: 2.4rem;
     font: 400 1.6rem/1.5 'Nunito', sans-serif;
+    color: aliceblue;
 }
 
 aside footer p {
-    margin-top: .8rem;
+    margin-top: 20rem;
 }
 
 #mapid {
@@ -56,6 +57,37 @@ a.add-aglomeracao {
 
     transition: background-color 200ms;
 }
+
+
+.perfil {
+    margin-top: 40px;
+    position: absolute;
+    right: 10rem;
+    
+    z-index: 10;
+
+    width: 2.4rem;
+    height: 2.4rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil h5 {
+    color: rgb(44, 43, 43);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#avatar{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
 
 a.add-aglomeracao:hover {
     background: #56108A

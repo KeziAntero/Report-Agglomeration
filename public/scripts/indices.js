@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',)
 .addTo(map);
 
 const icon = L.icon({
-    iconUrl: "./public/images/location.svg",
+    iconUrl: "./public/images/mark-red.png",
     iconSize: [58, 68],
     iconAnchor: [29,68],
     popAnchor: [170, 2]

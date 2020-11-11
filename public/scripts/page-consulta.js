@@ -17,7 +17,7 @@ if ('geolocation' in navigator) {
 
       
       const icon = L.icon({
-        iconUrl: "./public/images/mark.svg",
+        iconUrl: "./public/images/mark-green.png",
         iconSize: [58, 68],
         iconAnchor: [29,68],
         popupAnchor: [170, 2]
