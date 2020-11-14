@@ -1,6 +1,6 @@
 git init
 git add .
-git commit -m "Inclusão de marcadores personalizados no mapa"
+git commit -m "Inclusão de campo de input de busca no mapa"
 git remote add origin https://github.com/KeziAntero/Report-Agglomeration.git
 git push -u origin master
 git branch escolar
@@ -50,5 +50,11 @@ if ('geolocation' in navigator) {
   }
 
 
+------------------------------------------------
+cores:
+Azul: marcador do mapa
+amarelo: de 3 a 10´pessoas
+laranja: de 11 a 50
+Vermelho acima de 50
 
 

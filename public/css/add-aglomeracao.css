@@ -1,7 +1,8 @@
-#add-aglomeracao {
+#add-aglomeracao  {
   display: flex;
   min-height: 100vh;
 }
+
 
 main {
   flex: 1;
@@ -19,4 +20,6 @@ main {
   background-color: #f5f8fa;
   border-radius: 0 0 20px 20px;
 }
+
+
 
