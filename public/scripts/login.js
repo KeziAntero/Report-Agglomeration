@@ -59,22 +59,53 @@ function fbLogout() {
     });
 }
 
+
+function saveUserData(userData){
+    $.post('userData.php', {oauth_provider:'facebook',userData: JSON.stringify(userData)}, function(){ return true; });
+}
+
+
+function getFbUserData(){
+    FB.api('/me', {locale: 'en_US', fields: 'id,first_name,last_name,email,link,gender,locale,picture'},
+    function (response) {
+        document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
+        document.getElementById('fbLink').innerHTML = 'Logout from Facebook';
+        document.getElementById('status').innerHTML = '<p>Thanks for logging in, ' + response.first_name + '!</p>';
+        document.getElementById('userData').innerHTML = '<h2>Facebook Profile Details</h2><p><img src="'+response.picture.data.url+'"/></p><p><b>FB ID:</b> '+response.id+'</p><p><b>Name:</b> '+response.first_name+' '+response.last_name+'</p><p><b>Email:</b> '+response.email+'</p><p><b>Gender:</b> '+response.gender+'</p><p><b>FB Profile:</b> <a target="_blank" href="'+response.link+'">click to view profile</a></p>';
+		
+        // Salva dados do usuário
+        saveUserData(response);
+    });
+}
+
+
 //***********************************************************************************************//
 
 //Login com o Goggle
 
-// Sign-in success callback
+// Renderizar botão de login do Google
+function renderButton() {
+    gapi.signin2.render('Google', {
+        'scope': 'profile email',
+        'width': 150,
+        'height': 38,
+        'longtitle': true,
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+    });
+}
+
+//Recupere os dados da conta do Google 
 function onSuccess(googleUser) {
-    // Get the Google profile data (basic)
-    //var profile = googleUser.getBasicProfile();
     
-    // Retrieve the Google account data
+    
+    // Recupere os dados da conta do Google
     gapi.client.load('oauth2', 'v2', function () {
         var request = gapi.client.oauth2.userinfo.get({
             'userId': 'me'
         });
         request.execute(function (resp) {
-            // Display the user details
+            // Exibir os detalhes do usuário 
             var profileHTML = '<h3>Welcome '+resp.given_name+'! <a href="javascript:void(0);" onclick="signOut();">Sign out</a></h3>';
             profileHTML += '<img src="'+resp.picture+'"/><p><b>Google ID: </b>'+resp.id+'</p><p><b>Name: </b>'+resp.name+'</p><p><b>Email: </b>'+resp.email+'</p><p><b>Gender: </b>'+resp.gender+'</p><p><b>Locale: </b>'+resp.locale+'</p><p><b>Google Profile:</b> <a target="_blank" href="'+resp.link+'">click to view profile</a></p>';
             document.getElementsByClassName("userContent")[0].innerHTML = profileHTML;
@@ -85,12 +116,12 @@ function onSuccess(googleUser) {
     });
 }
 
-// Sign-in failure callback
+// Retorna se tiver falha de login
 function onFailure(error) {
     alert(error);
 }
 
-// Sign out the user
+// Desconecta o usuário
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
@@ -100,4 +131,34 @@ function signOut() {
     });
     
     auth2.disconnect();
+}
+
+//-----------------------------------------------------------------------------
+// Enviar informações do perfil do usuário para o servidor 
+
+// Salva os dados do usuário no banco de dados
+function saveUserData(userData){
+    $.post('userData.php', { oauth_provider:'google', userData: JSON.stringify(userData) });
+}
+
+
+function onSuccess(googleUser) {
+    
+    gapi.client.load('oauth2', 'v2', function () {
+        var request = gapi.client.oauth2.userinfo.get({
+            'userId': 'me'
+        });
+        request.execute(function (resp) {
+            
+            var profileHTML = '<h3>Welcome '+resp.given_name+'! <a href="javascript:void(0);" onclick="signOut();">Sign out</a></h3>';
+            profileHTML += '<img src="'+resp.picture+'"/><p><b>Google ID: </b>'+resp.id+'</p><p><b>Name: </b>'+resp.name+'</p><p><b>Email: </b>'+resp.email+'</p><p><b>Gender: </b>'+resp.gender+'</p><p><b>Locale: </b>'+resp.locale+'</p><p><b>Google Profile:</b> <a target="_blank" href="'+resp.link+'">click to view profile</a></p>';
+            document.getElementsByClassName("userContent")[0].innerHTML = profileHTML;
+            
+            document.getElementById("gSignIn").style.display = "none";
+            document.getElementsByClassName("userContent")[0].style.display = "block";
+            
+            // Salva dados do usuário
+            saveUserData(resp);
+        });
+    });
 }

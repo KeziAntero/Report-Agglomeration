@@ -1,6 +1,6 @@
 git init
 git add .
-git commit -m "Inclusão de campo de input de busca no mapa"
+git commit -m "Implementação js da pagina de indices"
 git remote add origin https://github.com/KeziAntero/Report-Agglomeration.git
 git push -u origin master
 git branch escolar
