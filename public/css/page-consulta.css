@@ -15,16 +15,12 @@ aside {
     justify-content: space-between;
 }
 
-aside h2 {
-    margin-top: 6.4rem;
-
-    font: 800 clamp(2rem, 5vw, 3.6rem)/1.1 'Nunito', sans-serif;
-}
 
 aside p {
     margin-top: 2.4rem;
-    font: 400 1.6rem/1.5 'Nunito', sans-serif;
+    font: 400 2.6rem/1.5 'Nunito', sans-serif;
     color: aliceblue;
+    text-align: center
 }
 
 aside footer p {
@@ -58,10 +54,54 @@ a.add-aglomeracao {
     transition: background-color 200ms;
 }
 
-.perfil {
-    margin-top: 40px;
+a.add-aglomeracao:hover {
+    background: #56108A
+}
+
+a.indices {
     position: absolute;
-    right: 10rem;
+    right: 4rem;
+    bottom: 12rem;
+
+    z-index: 10;
+
+    width: 6.4rem;
+    height: 6.4rem;
+    background:#32cd33;
+    border: 0;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 200ms;
+}
+
+a.indices:hover {
+    background: #228b22
+}
+
+
+#avatar{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+button[name="drop"]{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    outline: 0;
+  }
+
+  .perfil {
+    margin-top: 30px;
+    position: absolute;
+    right: 7rem;
     
     z-index: 10;
 
@@ -71,26 +111,36 @@ a.add-aglomeracao {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: inline-block;
 }
 
-.perfil h5 {
-    color: rgb(44, 43, 43);
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .drop-content{
+    display: none;
+    background-color:#862adb;
+    position: absolute;
+    z-index: 10;
+    border-radius: 4px;
+    left: -20px;
     
-}
-#avatar{
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
+  }
+  .drop-content a{
+    color: white;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    width: 100px;
+   
+  }
+  .drop-content a:hover{
+    background-color: #56108A;
+    
+  }
+  .perfil:hover .drop-content{
+    display: block; 
+  }
 
 
-a.add-aglomeracao:hover {
-    background: #56108A
-}
 
 .leaflet-popup-content-wrapper {
     background: rgba(255, 255, 255, 0.8);
@@ -139,11 +189,21 @@ a.add-aglomeracao:hover {
     aside{
         display: none;
     }
+    .perfil {
+        margin-top: 20px;
+        position: absolute;
+        right: 6rem;
+        
+        z-index: 10;
+    }
+    
+a.add-aglomeracao {
+    position: absolute;
+    right: 14rem;
 }
 
+}
 
 @media (min-width: 768px){
-    
-    
-    
+   
 }

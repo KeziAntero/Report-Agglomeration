@@ -1,6 +1,6 @@
 git init
 git add .
-git commit -m "Implementação js da pagina de indices"
+git commit -m "Integração da autenticação com BD"
 git remote add origin https://github.com/KeziAntero/Report-Agglomeration.git
 git push -u origin master
 git branch escolar
