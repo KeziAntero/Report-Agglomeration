@@ -16,6 +16,16 @@ searchControl.on('results', function (data) {
     results.addLayer(L.marker(data.results[i].latlng));
   }
 });
+var popup = L.popup();
+
+function onMapClick(e) {
+   popup
+        .setLatLng(e.latlng)
+        .setContent("Você clicou no mapa" )
+         .openOn(map);
+}
+
+map.on('click', onMapClick);
 
 
 
