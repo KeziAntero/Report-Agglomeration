@@ -73,7 +73,7 @@
 }
 .form-group a:hover{
   text-decoration: none;
-  color:#862adb;
+  color:#0077b6;
 }
 
 .mt-4 a{
@@ -81,17 +81,17 @@
 }
 .mt-4 a:hover{
  text-decoration: none;
- color:#862adb;
+ color:#0077b6;
 }
 
 .btn.btn-block{
-	background-color: #862adb;
+	background-color:#03045e;
   border: none;
   transition: background 0.2s;
 }
 
 .btn.btn-block:hover{
-	background-color: #56108A;
+	background-color: #040786;
 	
 }
 .my-login-page .btn.btn-block .social-btn{
@@ -107,7 +107,7 @@
 	border-color: inherit; 
 	-webkit-box-shadow: none; 
 	box-shadow: none; 
-  border: 1px solid#862adb;
+  border: 1px solid#0077b6;
   }
 
 .text-center {

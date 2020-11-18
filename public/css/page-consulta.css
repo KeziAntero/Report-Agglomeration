@@ -7,7 +7,7 @@
 
 aside {
     width: clamp(24rem, 25vw, 44rem);
-    background: #862adb;
+    background: #03045e;
     padding: clamp(3rem, 5vw, 8rem);
 
     display: flex;
@@ -43,7 +43,7 @@ a.add-aglomeracao {
 
     width: 6.4rem;
     height: 6.4rem;
-    background:#862adb;
+    background:#03045e;
     border: 0;
     border-radius: 2rem;
 
@@ -55,7 +55,7 @@ a.add-aglomeracao {
 }
 
 a.add-aglomeracao:hover {
-    background: #56108A
+    background: #020238
 }
 
 a.indices {
@@ -79,7 +79,7 @@ a.indices {
 }
 
 a.indices:hover {
-    background: #228b22
+    background:#228b22;
 }
 
 
@@ -117,7 +117,7 @@ button[name="drop"]{
 
   .drop-content{
     display: none;
-    background-color:#862adb;
+    background-color:#03045e;
     position: absolute;
     z-index: 10;
     border-radius: 4px;
@@ -133,7 +133,7 @@ button[name="drop"]{
    
   }
   .drop-content a:hover{
-    background-color: #56108A;
+    background-color:#020241;
     
   }
   .perfil:hover .drop-content{
@@ -148,7 +148,7 @@ button[name="drop"]{
 }
 
 .leaflet-popup-content {
-    color: #56108A;
+    color:#0077b6;
     margin: .8rem 1.2rem;
 
     display: flex;
@@ -171,7 +171,7 @@ button[name="drop"]{
 }
 
 .leaflet-popup-content a:hover {
-    background: #56108A;
+    background:#0077b6;
 }
 
 .leaflet-popup-tip {

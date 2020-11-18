@@ -95,13 +95,13 @@ main {
 
 #btn-salvar{
 
-  background-color: #862adb;
+  background-color:#03045e;
   color: #fff;
  
 }
 
 #btn-salvar:hover{
-    background-color: #56108A;
+    background-color: #040786;
     color: #fff;
 
 }

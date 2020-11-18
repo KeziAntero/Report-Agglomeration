@@ -65,14 +65,14 @@ fieldset legend {
 	border-color: inherit; 
 	-webkit-box-shadow: none; 
 	box-shadow: none; 
-  border: 1px solid#862adb;
+  border: 1px solid #0077b6;
 }
 
 .input-block input:focus{ 
 	border-color: inherit; 
 	-webkit-box-shadow: none; 
 	box-shadow: none; 
-  border: 1px solid#862adb;
+  border: 1px solid #0077b6;
 }
 
 .input-block input {

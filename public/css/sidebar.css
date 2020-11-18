@@ -2,7 +2,7 @@ aside.sidebar {
     position: fixed;
     height: 100%;
     padding:  32px 24px; 
-    background:#8A05BE;
+    background:#03045e;
 
     display: flex;
     flex-direction: column;

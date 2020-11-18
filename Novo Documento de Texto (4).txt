@@ -1,10 +1,12 @@
 git init
 git add .
-git commit -m "Integração da autenticação com BD"
+git commit -m "Inclusão menu dropdown no avatar de usuario"
 git remote add origin https://github.com/KeziAntero/Report-Agglomeration.git
 git push -u origin master
 git branch escolar
 
+
+https://coolors.co/palettes/trending
 
 if ('geolocation' in navigator) {
     
