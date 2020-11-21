@@ -33,7 +33,7 @@ fieldset legend {
   padding-bottom: 2.4rem;
 }
 
-.input-block + .input-block {
+.select-block, .input-block {
   margin-top: 2.4rem;
   
 }
@@ -49,14 +49,21 @@ fieldset legend {
   color: #8FA7D3;
   margin-left: 2.4rem;
 }
+.select-block label {
+   color:  #8FA7B3;
+  }
 
-.input-block input, .input-block textarea {
+  .select-block option {
+    font-size: 1.4rem;
+    color: #8FA7B3;
+    line-height: 1.5;
+   }
+
+.input-block input, .select-block select, .input-block textarea {
   width: 100%;
-
   background: #F5F8FA;
   border: 1px solid #D3E2E5;
   border-radius: 2rem;
-  
   outline: 0;
   color: #5C8599;
 }
@@ -76,6 +83,11 @@ fieldset legend {
 }
 
 .input-block input {
+  height: 6.4rem;
+  padding: 0 1.6rem;
+}
+
+.select-block select {
   height: 6.4rem;
   padding: 0 1.6rem;
 }
@@ -104,40 +116,19 @@ fieldset legend {
   cursor: pointer;
 }
 
-.new-upload {
-  position: relative;
-}
+  
+@media (max-width: 450px){
 
-.new-upload + .new-upload {
-  margin-top: 2.4rem;
-}
-
-.new-upload span {
+  form {
   position: absolute;
-  right: 12px;
-  bottom: 14px;
-
-  display: flex;
-
-  background: #FFFFFF;
-  border: 1px solid #D3E2E5;
-  border-radius: 10px;
-  box-sizing: border-box;
-
-  padding: .6rem;
-
-  cursor: pointer;
-}
-
-
-  
-@media (max-width: 767.9px){
- form {
-  width: inherit;
-  margin: inherit;
-
-  padding: inherit;
-  
-}
-
+  width: 365px;
+  margin-left: -103px;
+  margin-top: -3px;
+  padding: 5px 1em 1em 1em;
+  }
+  fieldset legend {
+    font-size: 2.8rem;
+    font-weight: 700;
+    }
+    
 }

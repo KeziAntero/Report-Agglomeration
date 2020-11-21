@@ -40,11 +40,11 @@ new Chart(document.getElementById("line-chart"), {
   new Chart(document.getElementById("pie-chart"), {
     type: 'pie',
     data: {
-      labels: ["MUITAS", "NENHUMA", "POUCAS", "TODAS"],
+      labels: ["ALGUMAS", "NENHUMA",  "TODAS"],
       datasets: [{
         label: "Population (millions)",
-        backgroundColor: ["#3e95cd", "#e62e00","#F7B500","#7EEA0F"],
-        data: [5,85,6,5]
+        backgroundColor: ["#3e95cd", "#e62e00","#7EEA0F"],
+        data: [5,85,5]
       }]
     },
     options: {

@@ -114,3 +114,18 @@ main {
     color: #5C8599;
 }
 
+  
+@media (max-width: 450px){
+
+    .indices-details {
+        position: absolute;
+        width: 365px;
+        margin-left: -103px;
+        margin-top: -3px;
+        padding: 5px 1em 1em 1em;
+    }
+
+   
+      
+  }
+  

@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,700,400);
+ 
+body {
+  margin: 0;
+  padding: 10%;
+  text-align: center;
+  font-family: 'Open Sans';
+  background:#EBF2F5;
+  color: #494949;
+}
+
+.user {
+	padding: 50px 20px;
+	background: #FFFFFF;
+	border-radius: 1rem;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	width: 400px;
+	display: block;
+	margin: 0 auto;
+}
+
+
+.g-signin2 .abcRioButton {
+  display: block;
+  margin: 40px auto 0 auto;
+  text-align: center;
+  border-radius: 1rem;
+  background-color:  #FFFFFF;
+  color: #494949;
+}
+
+.g-signin2 .abcRioButton:hover {
+  background-color:  #FFFFFF;
+  
+}
+
+@media screen and (max-width: 425px) {
+	.user {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+.user {
+		margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+	}
+}

@@ -2,7 +2,7 @@
 <html lang="pt_BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Adicionar aglomeração | RA</title>
     <link rel="icon" href="public/images/favicon.png" />
     <link rel="stylesheet" href="">
@@ -65,26 +65,29 @@
 
             <div class="input-block">
               <label for="name">Nome do local</label>
-              <input id="name" name="name" placeholder="Praça, Rua, Área de lazer, Comercio..." required />
+              <input id="name" name="name" placeholder="Ex: Lotérica da sorte" required />
             </div>
 
-            
-            <div class="input-block">
-              <label for="Tipo">Tipo de local</label>
-              <input id="Tipo" name="Tipo" placeholder="Lotérica..."required />
+            <div class="select-block">
+              <label for="number">Número médio de pessoas</label>
+              <select name="number[]" required>
+               <option selected disabled>Selecione...</option>
+                <option value="0">3 a 10</option>
+                <option value="1">11 a 50</option>
+                <option value="2">Acima de 50</option>
+               </select>
             </div>
-
-            <div class="input-block">
-              <label for="number">Nº estimado de pessoas</label>
-              <input type = Number id="number" name="number" required />
+          
+            <div class="select-block">
+              <label for="number">Pessoas usando máscara</label>
+              <select id="opções" required>
+               <option selected disabled>Selecione...</option>
+                <option value="0" >Todas</option>
+                <option value="1">Algumas</option>
+                <option value="2">Nenhuma</option>
+               </select>
             </div>
-
-            <div class="input-block">
-              <label for="hours">Data/Horário</label>
-              <input type = DateTime-Local id="hours" name="hours" required />
-            </div>
-
-            
+           
             <div class="input-block">
               <label for="detachment">Distanciamento sendo respeitado?</label>
               <input
@@ -100,28 +103,16 @@
                 <button data-value="0" onclick="toggleSelect(event)" type="button">Não</button>
               </div>
 
-              <div class="input-block">
-                <label for="wearing-mask">Pessoas usando máscara?</label>
-                <input
-                  type="hidden"
-                  id="wearing-mask"
-                  name="wearing-mask"
-                  value="1"
-                  required
-                />
-  
-                <div class="button-select">
-                  <button data-value="1" onclick="toggleSelect(event)" type="button" class="active">Sim</button>
-                  <button data-value="0" onclick="toggleSelect(event)" type="button">Não</button>
-                </div>
-  
-
+                           
             <div class="input-block">
               <label for="note">Observação<span>Máximo de 300 caracteres</span></label>
               <textarea id="note" name="note" required></textarea>
             </div>
 
-           
+            <div class="input-block">
+              <label for="hours">Data/Horário</label>
+              <input type = DateTime-Local id="hours" name="hours" required />
+            </div>
 
            
               <button type="submit" class="primary-button">Confirmar</button>
