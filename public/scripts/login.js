@@ -1,45 +1,20 @@
-var person = { userID: "", first_name: "", accessToken: "", picture: "", email: ""};
 
-function logIn() {
-    FB.login(function (response) {
-        if (response.status == "connected") {
-            person.userID = response.authResponse.userID;
-            person.accessToken = response.authResponse.accessToken;
+function onSignIn(response) {
+      
+      var perfil = response.getBasicProfile();
 
-            FB.api('/me?fields=id,first_name,email,picture.type(large)', function (userData) {
-                person.first_name = userData.first_name;
-                person.email = userData.email;
-                person.picture = userData.picture.data.url;
+      var userID = perfil.getId();
+      
+      var userName = perfil.getName();
 
-                $.ajax({
-                   url: "login.php",
-                   method: "POST",
-                   data: person,
-                   dataType: 'text',
-                   success: function (serverResponse) {
-                       console.log(person);
-                       if (serverResponse == "success")
-                           window.location = "index.php";
-                   }
-                });
-            });
-        }
-    }, {scope: 'public_profile, email'})
-}
+      var userPicture = perfil.getImageUrl();
 
-window.fbAsyncInit = function() {
-    FB.init({
-        appId            : '1791804077640492',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v9.0'
-    });
-};
+      document.getElementById('user-photo').src = userPicture;
+      document.getElementById('user-name').innerText = userName;
+      
 
-(function(d, s, id){
-    var js, fjs = d.getElementsByTagfirst_name(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+      // Recebendo o TOKEN para as requisições futuras da API:
+      var LoR = response.getAuthResponse().id_token;
+      console.log("~ le Tolkien: " + LoR);
+      
+  };
