@@ -1,3 +1,6 @@
+var latitude;
+var longitude;
+
 //create map
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -22,11 +25,11 @@ map.on('click', (event) => {
     const lat = event.latlng.lat
     const lng = event.latlng.lng
 
-    console.log("latitude => "+lat);
-    console.log("longitude => "+lng);
-
     document.querySelector('[name=lat]').value = lat
     document.querySelector('[name=lng]').value = lng
+
+    latitude = lat
+    longitude = lng
 
     marker && map.removeLayer(marker)
 
@@ -61,4 +64,35 @@ function toggleSelect(event) {
     const input = document.querySelector('[name="detachment"]')
     
     input.value = button.dataset.value
+}
+
+$("#confirmar").on("click", function (evt) {
+    evt.preventDefault();
+    var form = document.querySelector(form);
+    var reporte = obterReport(form);
+    console.log(reporte);
+    //enviarParaWebService(reporte);
+});
+
+function obterReport(form){
+    var lat = latitude;
+    var lng = longitude;
+    var localizacao = latitude.concat(",",longitude);
+    report = {
+        "status": "success",
+        "nomeLocal": form.nome.value,
+        "quantidade": form.quantidade.value,
+        "mascara": form.opcoes.value,
+        "distanciamento": form.detachment.value,
+        "obs": form.note.value,
+        "dataHora": form.hours.value,
+        "localizacao": localizacao
+    }
+
+    return report;
+
+}
+
+function enviarParaWebService(report){
+    $.post("http://localhost:7000",JSON.parse(report));
 }

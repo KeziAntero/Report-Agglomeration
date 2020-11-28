@@ -21,6 +21,7 @@ function onSignIn(response) {
       
   };
 
-function redirecionar(){
+function redirecionar(data){
+    $.get("index.php",data);
     window.location.assign = "index.php";
 }

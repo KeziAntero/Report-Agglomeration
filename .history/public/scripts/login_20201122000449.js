@@ -11,16 +11,12 @@ function onSignIn(response) {
             "imagem" : perfil.getImageUrl()
       }  
 
-      console.log(user);
+      $.get("index.php",user);
 
       // Recebendo o TOKEN para as requisições futuras da API:
       var LoR = response.getAuthResponse().id_token;
       console.log("~ le Tolkien: " + LoR);
 
-      redirecionar(user);
-      
+      window.location.href = "index.php";
   };
 
-function redirecionar(){
-    window.location.assign = "index.php";
-}

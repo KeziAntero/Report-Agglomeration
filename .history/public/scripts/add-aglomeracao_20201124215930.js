@@ -22,9 +22,6 @@ map.on('click', (event) => {
     const lat = event.latlng.lat
     const lng = event.latlng.lng
 
-    console.log("latitude => "+lat);
-    console.log("longitude => "+lng);
-
     document.querySelector('[name=lat]').value = lat
     document.querySelector('[name=lng]').value = lng
 

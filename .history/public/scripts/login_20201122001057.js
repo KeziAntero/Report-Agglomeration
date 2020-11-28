@@ -17,10 +17,6 @@ function onSignIn(response) {
       var LoR = response.getAuthResponse().id_token;
       console.log("~ le Tolkien: " + LoR);
 
-      redirecionar(user);
-      
+      window.location.href = "index.php";
   };
 
-function redirecionar(){
-    window.location.assign = "index.php";
-}
