@@ -1,14 +1,27 @@
+if ('geolocation' in navigator) {
+  navigator.geolocation.getCurrentPosition(position => {
+    lat = position.coords.latitude;
+    lon = position.coords.longitude;
 
-navigator.geolocation.getCurrentPosition(position => {
-  lat = position.coords.latitude;
-  lng = position.coords.longitude;
+    
+var map = L.map('mapid').setView([lat,  lon], 15);
 
-const map = L.map('mapid').setView([lat,lng], 15);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',)
-.addTo(map);
+var searchControl = L.esri.Geocoding.geosearch().addTo(map);
 
-L.marker([lat,lng]).addTo(map)
+var results = L.layerGroup().addTo(map);
+
+searchControl.on('results', function (data) {
+  results.clearLayers();
+  for (var i = data.results.length - 1; i >= 0; i--) {
+    results.addLayer(L.marker(data.results[i].latlng));
+  }
+});
+
+L.marker([lat,lon]).addTo(map)
     .bindPopup('Você está aqui.')
     .openPopup();
 
@@ -28,7 +41,18 @@ const popup = L.popup({
 }).setContent('Lorem ipsum dolor sit amet')
 
 L
-.marker([lat,lng], { icon })
+.marker([lat,lon], { icon })
 .addTo(map)
 .bindPopup(popup)
 });
+
+ 
+} else {
+  document.getElementById('geolocation not available');
+}
+
+
+  //L.esri.Cluster.featureLayer({
+  //  url: 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/Earthquakes_Since1970/MapServer/0'
+  //}).addTo(map);
+
