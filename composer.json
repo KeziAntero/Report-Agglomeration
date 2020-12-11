@@ -1,0 +1,32 @@
+{
+    "name": "joao-tads/login_google",
+    "description": "Login usando API do Google",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "João G. M. Junior",
+            "email": "junior.guedes@academico.ifrn.edu.br",
+            "role": "Developer",
+            "homepage": "http://localhost:3000/"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/config.php"
+        ]
+    },
+    "require": {
+        "phpmailer/phpmailer": "6.0.*",
+        "league/oauth2-google": "^3.0"
+    },
+    "require-dev": {
+        "composer/composer": "2.0.*"
+    }
+}
