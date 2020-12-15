@@ -48,22 +48,63 @@
     crossorigin=""></script>
        
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
- 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
  
   </head>
   <body>
     
     <div id="page-consulta">
-      <aside class="animate-right">
+     
+      <aside class="animate-right active">
         <header>
           <img src="./public/images/logob.png" alt="logo" width="180" height="70"/>
         </header>
        
-        <footer>
-          <p>
-            <span id="city"></span>cidade<br />
-          </p>
-        </footer>
+      <footer>
+          <p>5 MAIORES AGLOMERAÇÕES</p>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th id=principal>Local</th>
+              <th>nº de pessoas</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+              <tr>
+                <td>1</td>
+                <td>Loterica da sorte</td>
+                <td>100</td>
+              </tr>
+              
+              <tr>
+                <td>2</td>
+                <td>supermercado</td>
+                <td>80</td>
+              </tr>
+              
+              <tr>
+                <td>3</td>
+                <td>loja2</td>
+                <td>20</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>loja2</td>
+                <td>20</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>loja2</td>
+                <td>20</td>
+              </tr>
+
+          </tbody>
+        </table>
+      </footer>
       </aside>
           <div id="mapid" class="animate-appear"></div>
       
@@ -74,19 +115,21 @@
               <a href="?off=true"><i class="fas fa-sign-out-alt"></i>  Sair</a>
             </div>
           </div>
-      </div>
-     
-      <a href="indices.php" class="indices" title="Indices aglomeração">
-        <img src="./public/images/graph.svg" alt="Indices aglomeração" style="width: 50px;"/>
-      </a>
+    </div>
+
+      
+      <a class="toggle" onclick="toggleMenu()" title="Maiores aglomeração"></a>  
+
       <a href="add-aglomeracao.php" class="add-aglomeracao" title="Adicione uma aglomeração">
         <img src="./public/images/plus.svg" alt="Adicione uma aglomeração" />
       </a>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="./public/scripts/map-index.js"></script>
     <script src="./public/scripts/login.js"></script>
+    <script src="./public/scripts/responsivo-agllo.js"></script>
   </body>
 </html>
