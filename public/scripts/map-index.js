@@ -1,10 +1,10 @@
 if ('geolocation' in navigator) {
   navigator.geolocation.getCurrentPosition(position => {
     lat = position.coords.latitude;
-    lon = position.coords.longitude;
+    lng = position.coords.longitude;
 
     
-var map = L.map('mapid').setView([lat,  lon], 15);
+var map = L.map('mapid').setView([lat,  lng], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -21,7 +21,7 @@ searchControl.on('results', function (data) {
   }
 });
 
-L.marker([lat,lon]).addTo(map)
+L.marker([lat,lng]).addTo(map)
     .bindPopup('Você está aqui.')
     .openPopup();
 
@@ -41,7 +41,7 @@ const popup = L.popup({
 }).setContent('Lorem ipsum dolor sit amet')
 
 L
-.marker([lat,lon], { icon })
+.marker([lat,lng], { icon })
 .addTo(map)
 .bindPopup(popup)
 });
