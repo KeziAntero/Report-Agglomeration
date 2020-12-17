@@ -74,8 +74,8 @@
             </div>
           
             <div class="select-block">
-              <label for="number">Pessoas usando máscara</label>
-              <select id="opções" name="opcoes" required>
+              <label for="opcoes">Pessoas usando máscara</label>
+              <select id="opcoes" name="opcoes" required>
                <option selected disabled>Selecione...</option>
                 <option value="0" >Todas</option>
                 <option value="1">Algumas</option>

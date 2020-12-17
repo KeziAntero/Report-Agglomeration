@@ -26,19 +26,21 @@ L.marker([lat,lng]).addTo(map)
     .openPopup();
 
 
+
 const icon = L.icon({
-  iconUrl: "./public/images/mark-red.png",
+  iconUrl: "./public/images/mark-yellow.png",
   iconSize: [38, 48],
   iconAnchor: [0,0],
   popupAnchor: [20, 3]
 })
 
+
 const popup = L.popup({
   closeButton: false,
   className: "map-popup",
-  minWidth: 140,
+  minWidth: 150,
   minHeight: 840
-}).setContent('Lorem ipsum dolor sit amet')
+}).setContent('<b>Local: </b><br><b>Qtd de pessoas: </b></br><b>Usando máscara: </br><b>Distanciamento: </br><b>Hora: </b><br><b>Obs: </br>')
 
 L
 .marker([lat,lng], { icon })
