@@ -9,7 +9,7 @@ if ('geolocation' in navigator) {
     lng = position.coords.longitude;
 
     
-map = L.map('mapid').setView([lat,  lng], 8);
+map = L.map('mapid').setView([lat,  lng], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 

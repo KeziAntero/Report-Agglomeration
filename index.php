@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
 	<link rel="stylesheet" href="public/css/login.css">
+	<link rel="icon" href="./public/images/favicon.png" />
 </head>
 
 <body>

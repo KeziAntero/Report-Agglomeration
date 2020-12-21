@@ -11,7 +11,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',)
 
 
 const icon = L.icon({
-    iconUrl: "./public/images/mark-red.png",
+    iconUrl: "./public/images/mark-red-aviso.png",
     iconSize: [38, 48],
     iconAnchor: [29,68],
 })
