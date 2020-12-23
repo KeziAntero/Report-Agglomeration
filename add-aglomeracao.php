@@ -47,7 +47,7 @@
       </aside>
 
       <main class="animate-appear with-sidebar">
-        <form action="./controller/ReportesController.php" method="POST">
+        <form action="http://7.156.46.82/webservice/reporte_consulta_aglomeracao/" method="POST">
           <fieldset>
             <legend>Adicionar aglomeração</legend>
 

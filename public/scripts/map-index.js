@@ -1,5 +1,6 @@
-var urlAllWS = "http://localhost:7000?pesquisa=all";
-var urlTopWS = "http://localhost:7000?pesquisa=top";
+var urlAllWS = "http://7.156.46.82/webservice/reporte_consulta_aglomeracao/?pesquisa=all";
+
+
 var reportes;
 var map;
 
@@ -49,6 +50,7 @@ var autoFunction = setInterval(getAllReportes,1000);
 
 function getAllReportes(){
   $.get(urlAllWS,function(result) {
+    
     result.forEach(item => {
       var dist = "NÃO";
       if(item.report_distanciamento === "1"){
@@ -57,27 +59,27 @@ function getAllReportes(){
       reportes = `
                   <table>
                   <tr>
-                    <th>Local</th>
-                    <td>${item.report_nome_local}</td>
+                    <th>Local:</th>
+                    <td style="color: #000;">${item.report_nome_local}</td>
                   </tr>
                   <tr> 
-                    <th>Qtd de Pessoas</th>
-                    <td>${item.report_quantidade_pessoas}</td>
+                    <th>Qtd de Pessoas:</th>
+                    <td style="color: #000;">${item.report_quantidade_pessoas}</td>
                   </tr>
                   <tr>
-                    <th>Máscara</th>
-                    <td>${item.report_mascara}</td>
+                    <th>Máscara:</th>
+                    <td style="color: #000;">${item.report_mascara}</td>
                   <tr>
-                    <th>Distanciamento</th>
-                    <td>${dist}</td>
+                    <th>Distanciamento:</th>
+                    <td style="color: #000;">${dist}</td>
                   </tr>  
                   <tr>
-                    <th>Data e Hora</th>
-                    <td>${item.report_data_hora}</td>
+                    <th>Data e Hora:</th>
+                    <td style="color: #000;">${item.report_data_hora}</td>
                   </tr>
                   <tr>  
-                    <th>Obs</th>
-                    <td>${item.report_observacoes}</td>
+                    <th>Obs:</th>
+                    <td style="color: #000;">${item.report_observacoes}</td>
                   </tr>
                 </table>
                 `;
