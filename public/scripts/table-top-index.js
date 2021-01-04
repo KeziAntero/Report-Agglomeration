@@ -1,4 +1,4 @@
-var urlTopWS = "http://7.156.46.82/webservice/reporte_consulta_aglomeracao/?pesquisa=top";
+var urlTopWS = "http://ws-reporte-consulta.brazilsouth.cloudapp.azure.com:2500/top";
 window.onload = getTopReportes;
 var autoTopFunction = setInterval(getTopReportes,5000);
 
