@@ -1,4 +1,4 @@
-var urlAllWS = "http://7.156.46.82/webservice/reporte_consulta_aglomeracao/?pesquisa=all";
+var urlAllWS = "http://ws-reporte-consulta.brazilsouth.cloudapp.azure.com:2500/all";
 
 
 var reportes;
